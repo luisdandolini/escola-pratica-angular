@@ -3,6 +3,9 @@
 <ul>
   <li *ngFor="let disciplina of disciplinas" (click)="selecionar(disciplina)">
     <p [class.selecionado]="selecionado == disciplina">{{ disciplina.nome }}</p>
+    <button (click)="excluir(disciplina)">
+      Excluir
+    </button>
     <p *ngIf="selecionado == disciplina">{{ disciplina.descricao }}</p>
   </li>
 </ul>
