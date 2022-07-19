@@ -1,0 +1,8 @@
+<h1>Disciplinas</h1>
+<hr>
+<ul>
+  <li *ngFor="let disciplina of disciplinas">
+   <strong>{{ disciplina.nome }}</strong> : {{ disciplina.descricao }}
+  </li>
+</ul>
+<router-outlet></router-outlet>
