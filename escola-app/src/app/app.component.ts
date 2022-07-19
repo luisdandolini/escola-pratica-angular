@@ -7,6 +7,10 @@ import { Disciplina } from './disciplina.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  selecionado:any;
+  nome:any;
+  descricao:any;
   
   disciplinas = [
     new Disciplina('Lingua Portuguesa', 'O objetivo é aprender português'),
@@ -17,4 +21,15 @@ export class AppComponent {
     new Disciplina('Biologia', 'O objetivo é aprender sobre tudo'),
     new Disciplina('Química', 'O objetivo é aprender a fazer vulcão'),
   ];
+
+  selecionar(disciplina: any) {
+    this.selecionado = disciplina;
+  }
+
+  salvar() {
+    const d = new Disciplina(this.nome, this.descricao);
+    this.disciplinas.push(d);
+    this.nome;
+    this.descricao;
+  }
 }
